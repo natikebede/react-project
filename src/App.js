@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
+import Main from './components/MainComponent.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {BrowserRouter} from 'react-router-dom';
 
-import Todo from './Todo.js';
-import Modal from './modal.js';
-import React, { useState } from "react";
+class App extends  Component
+{
+ 
+  render()
+  {
 
-
-function App() {
-  return (
-  <div className="container p-3  bg-light">
-     <h4 className="font-weight-bolder display-4"> my Todos</h4>
-     <div className="card text-dark p-5">
-      
-       modal
-     </div>
-   
-  
-  </div>
-   
-  );
+    return (
+      <BrowserRouter>
+      <div className="container-fluid p-0">
+          <Main />
+      </div>
+      </BrowserRouter>
+    );
+  }
 }
-
-export default   App;
+export default App;
